@@ -1,6 +1,67 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #d1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #ffffff88;
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #00000022;
+  z-index: 1000;
+  transition: background-color 0.5s;
+  top: 0;
+  cursor: default;
+  user-select: none;
+}
+
+.header.scrolled-top {
+  background-color: #d1f1f1;
+  transition: background-color 0.5s;
+  border-bottom: none;
+}
+
+.header h1 {
+  animation: none; 
+  background: linear-gradient(
+    90deg,
+    #000,
+    #000,
+    #000,
+    #000,
+    #000,
+    #000,
+    #777,
+    #000,
+    #000,
+    #000,
+    #000,
+    #000,
+    #000
+  );
+  background-size: 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.container {
+  margin-top: 100px;
+  padding: 20px;
 }
