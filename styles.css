@@ -16,7 +16,6 @@ body {
   width: 100%;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #00000022;
-  z-index: 1000;
   transition: background-color 0.5s;
   top: 0;
   cursor: default;
@@ -68,6 +67,8 @@ body {
 :root {
   --color1: rgb(254, 255, 234);
   --color2: rgb(204, 204, 204);
+	--cursor-size: 24px;
+	--background: #f2f2f2;
 }
 
 
@@ -378,4 +379,47 @@ body {
   to {
     transform: scale3d(1, 1, 1);
   }
+}
+
+
+[data-hover] {
+	position: relative;
+
+	[data-hover-bounds] {
+		position: absolute;
+		left: 0;
+		top: 0;
+		inset: 0;
+
+		/* 		outline: 1px solid red; */
+	}
+
+	&:hover {
+		[data-hover-bounds] {
+			transform: scale(4);
+		}
+	}
+}
+
+.cursor {
+	width: var(--cursor-size);
+	height: var(--cursor-size);
+	border-radius: 50%;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	transform: translate(-50%, -50%);
+
+	background: var(--background);
+	mix-blend-mode: difference;
+	pointer-events: none;
+}
+
+.cta {
+	width: 100px;
+	position: fixed;
+	top: -999px;
+	left: -999px;
+	pointer-events: none;
 }
