@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'courier new',monospace, sans-serif;
   background-color: #d1f1f1;
   margin: 0;
   padding: 0;
@@ -63,12 +63,11 @@ body {
 
 .container {
   margin-top: 100px;
-  padding: 20px;
 }
 
 :root {
-  --color1: rgb(0, 231, 255);
-  --color2: rgb(255, 0, 231);
+  --color1: rgb(254, 255, 234);
+  --color2: rgb(204, 204, 204);
 }
 
 
@@ -93,16 +92,15 @@ body {
   
   transition: transform 0.5s ease, box-shadow 0.2s ease;
   will-change: transform, filter;
-  
   background-color: #040712;
-  background-image: url(https://mtek3d.com/wp-content/uploads/2018/01/image-placeholder-500x500.jpg);
+  background-image: url(./assets/card.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform-origin: center;
   @media screen and (min-width: 600px) {
-    width: clamp(12.9vw, 61vh, 18vw);
-    height: clamp(18vw, 85vh, 25.2vw);
+    width: clamp(12.9vw, 61vh, 25vw);
+    height: clamp(18vw, 85vh, 30vw);
   }
 }
 

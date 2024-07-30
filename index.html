@@ -5,6 +5,7 @@
     <title>Silly's Showcase</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -12,9 +13,29 @@
         <h1 id="header-title">Silly's Showcase</h1>
     </div>
     <div class="container">
-        <div class="cards">
-            <div class="card animated businesscard"></div>
+        <div class="aboutme">
+            <div class="cards onleft">
+                <div class="card animated businesscard"></div>
+            </div>
+            <div class="me">
+                <h2>About Me</h2>
+                <p>
+                    Wordy word words about me. I am a person who does things and stuff. I like to do things and stuff.
+                </p>
+            </div>
         </div>
+        <div class="oaboutme">
+            <div class="cards onleft">
+                <div class="card animated businesscard"></div>
+            </div>
+            <div class="me">
+                <h2>About Me</h2>
+                <p>
+                    Wordy word words about me. I am a person who does things and stuff. I like to do things and stuff.
+                </p>
+            </div>
+        </div>
+
     </div>
     <script>
 
@@ -105,6 +126,36 @@
                 }, 2500);
             });
     </script>
+    <style>
+        .onleft {
+            float: left;
+        }
+        .aboutme {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 20px;
+            background-image: url(./assets/wave.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        .oaboutme {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 20px;
+            background-color: #ff8c00;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        .me {
+            width: 50%;
+            padding: 20px;
+        }
+
+    </style>
 </body>
 
 
